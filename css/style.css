@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:border-box; 
+    font-family: 'poppins' , sans-serif;
+} 
+
+body {
+    background-color: #222;
+    color:#fff
+}
+
+.glitch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    font-size: 100px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+.glitch::before , .glitch::after {
+    content: "SALEH";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+.glitch:hover::before {
+    animation: glitch 0.3s linear 6 ;
+    -webkit-animation: glitch 0.3s linear 6 ;
+    color:#e91e63;
+    z-index: -2;
+}
+
+.glitch:hover::after {
+    animation: glitch 0.3s linear 6 reverse ;
+    -webkit-animation: glitch 0.3s linear 6 reverse ;
+    color: #2196f3;
+    z-index: -1;
+}
+@keyframes glitch {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    20% {        
+        top: -5px;
+        left: -5px;
+    }
+    40% {        
+        top: 5px;
+        left: 5px;
+    }
+    60% {        
+        top: -5px;
+        left: 5px;
+    }
+    80% {        
+        top: 5;
+        left: -5px;
+    }
+    100% {        
+        top: 0;
+        left: 0;
+    }
+    
+}
